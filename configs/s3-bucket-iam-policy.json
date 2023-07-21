@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Sid": "AllowListBuckets",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "AllowAllOnArchiveBucket",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::[bucket-name]",
+                "arn:aws:s3:::[bucket-name]/*"
+            ]
+        }
+    ]
+}

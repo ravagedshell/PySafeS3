@@ -1,0 +1,17 @@
+aws_config:
+  region: us-east-1
+  retries:
+    max_attempts: 5
+    mode: standard
+transfer_config:
+  max_concurrency: 5
+  multipart_threshold: 2000000000
+  max_bandwidth: 1500000
+aws_credentials:
+  aws_access_key_id: REDACTED
+  aws_secret_access_key: REDACTED
+backup_job:
+  s3_bucket_name: somebucket.amazon.com
+  s3_bucket_region: us-east-1
+  local_backup_path: /some/file/path
+  verbosity: full
